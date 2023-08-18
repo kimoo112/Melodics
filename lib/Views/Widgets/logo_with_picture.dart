@@ -11,9 +11,9 @@ class LogoWithPicture extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(Assets.iconsLogo),
+        Image.asset(Assets.iconsLogo,width: 40,),
         const Padding(
-          padding: EdgeInsets.only(left:5.0),
+          padding: EdgeInsets.only(left:8.0),
           child: Logo(
             color: cBlack,
             fontsize: 19.05,

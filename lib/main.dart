@@ -1,7 +1,7 @@
 import 'package:audio/Providers/cart.dart';
 import 'package:audio/Providers/google_signin_.dart';
 import 'package:audio/Providers/register.dart';
-import 'package:audio/auth_check.dart';
+import 'package:audio/Views/Screens/splash_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
             ],
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'Audio',
+              title: 'Melodics',
               theme: ThemeData(
                 scaffoldBackgroundColor: cWhite,
                 appBarTheme: const AppBarTheme(backgroundColor: cWhite),
@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
                       bodyColor: cBlack,
                     ),
               ),
-              home: const AuthCheck(),
+              home: const SplashView(),
             ),
           );
         });

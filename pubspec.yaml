@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  another_flutter_splash_screen: ^1.1.5
   badges: ^3.1.1
   checkout_screen_ui: ^0.1.3
   cupertino_icons: ^1.0.2
@@ -53,6 +54,14 @@ flutter_assets:
 
 dev_dependencies:
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/Logo.png"
+  min_sdk_android: 21 
+
   flutter_test:
     sdk: flutter
 
