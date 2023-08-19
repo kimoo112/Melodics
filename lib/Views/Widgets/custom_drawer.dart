@@ -1,5 +1,6 @@
 import 'package:audio/Helpers/Constants/navigate.dart';
 import 'package:audio/Helpers/Constants/size.dart';
+import 'package:audio/Providers/cart.dart';
 import 'package:audio/Views/Screens/cart_view.dart';
 import 'package:audio/Views/Screens/profile_view.dart';
 import 'package:audio/Views/Screens/search_view.dart';
@@ -90,10 +91,15 @@ class CustomDrawer extends StatelessWidget {
             const Spacer(),
             Consumer<GoogleSignin>(
               builder: (BuildContext context, signin, Widget? child) {
-                return customListTile(Icons.logout, 'Logout', false, () {
-                  signin.logout();
-                  navigateToPR(const SigninView(), context);
-                });
+                return Consumer<TheCart>(
+                  builder: (BuildContext context, deleteCart, Widget? child) {
+                    return customListTile(Icons.logout, 'Logout', false, () {
+                      signin.logout();
+                      deleteCart.deleteAllFromCart;
+                      navigateToPR(const SigninView(), context);
+                    });
+                  },
+                );
               },
             ),
             const SizedBox(
@@ -118,7 +124,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             title: Text(
               title,
-              style:  TextStyle(fontWeight: FontWeight.w700, fontSize: 16.sp),
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16.sp),
             ),
             trailing: isTraining
                 ? const Icon(Icons.double_arrow_rounded, color: cMain)
