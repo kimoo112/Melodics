@@ -1,6 +1,5 @@
 import 'package:audio/Helpers/Constants/navigate.dart';
 import 'package:audio/Helpers/Constants/size.dart';
-import 'package:audio/Providers/cart.dart';
 import 'package:audio/Views/Screens/cart_view.dart';
 import 'package:audio/Views/Screens/profile_view.dart';
 import 'package:audio/Views/Screens/search_view.dart';
@@ -10,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import '../../Helpers/Constants/colors.dart';
+import '../../Providers/cart.dart';
 import '../../Providers/google_signin_.dart';
 import '../Screens/signin_view.dart';
 
@@ -89,17 +89,15 @@ class CustomDrawer extends StatelessWidget {
               navigateToP(const SearchView(), context);
             }),
             const Spacer(),
-            Consumer<GoogleSignin>(
-              builder: (BuildContext context, signin, Widget? child) {
-                return Consumer<TheCart>(
-                  builder: (BuildContext context, deleteCart, Widget? child) {
-                    return customListTile(Icons.logout, 'Logout', false, () {
-                      signin.logout();
-                      deleteCart.deleteAllFromCart;
-                      navigateToPR(const SigninView(), context);
-                    });
-                  },
-                );
+            Consumer2<GoogleSignin, TheCart>(
+              builder:
+                  (BuildContext context, signin, deleteCart, Widget? child) {
+                return customListTile(Icons.logout, 'Logout', false, () {
+                  signin.logout();
+                  deleteCart.cartProducts.clear();
+                  deleteCart.priceOfProducts = 0;
+                  navigateToPR(const SigninView(), context);
+                });
               },
             ),
             const SizedBox(
