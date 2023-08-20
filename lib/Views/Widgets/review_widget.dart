@@ -1,4 +1,4 @@
-import 'package:audio/Views/Widgets/rating_stars.dart';
+import 'rating_stars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../Helpers/Constants/colors.dart';

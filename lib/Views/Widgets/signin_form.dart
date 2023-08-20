@@ -1,4 +1,4 @@
-import 'package:audio/Helpers/Constants/colors.dart';
+import '../../Helpers/Constants/colors.dart';
 import 'package:flutter/material.dart';
 
 import 'text_field.dart';

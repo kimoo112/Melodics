@@ -1,5 +1,5 @@
-import 'package:audio/Model/featured_product_model.dart';
-import 'package:audio/Providers/cart.dart';
+import '../../Model/featured_product_model.dart';
+import '../../Providers/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

@@ -1,4 +1,3 @@
-import 'package:audio/Views/Screens/signin_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,6 +6,7 @@ import 'package:provider/provider.dart';
 import '../../Helpers/Constants/colors.dart';
 import '../../Helpers/Constants/navigate.dart';
 import '../../Providers/google_signin_.dart';
+import 'Login/signin_view.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({Key? key}) : super(key: key);

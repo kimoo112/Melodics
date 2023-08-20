@@ -1,22 +1,22 @@
-import 'package:audio/Providers/google_signin_.dart';
-import 'package:audio/Providers/register.dart';
+import '../../../Providers/google_signin_.dart';
+import '../../../Providers/register.dart';
 import 'package:provider/provider.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
-import '../../Helpers/Constants/colors.dart';
-import '../../Helpers/Constants/navigate.dart';
-import '../../Helpers/Constants/size.dart';
-import 'home_view.dart';
+import '../../../Helpers/Constants/assets.dart';
+import '../../../Helpers/Constants/colors.dart';
+import '../../../Helpers/Constants/navigate.dart';
+import '../../../Helpers/Constants/size.dart';
+import '../../Widgets/background.dart';
+import '../../Widgets/custom_button.dart';
+import '../../Widgets/logo.dart';
+import '../../Widgets/signin_form.dart';
+import '../home_view.dart';
 import 'signin_view.dart';
-import '../Widgets/background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../Helpers/Constants/assets.dart';
-import '../Widgets/custom_button.dart';
-import '../Widgets/logo.dart';
-import '../Widgets/signin_form.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({Key? key}) : super(key: key);
@@ -77,7 +77,7 @@ class _SignupViewState extends State<SignupView> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    const Text('Didn’t have any account?',
+                    const Text('Already have any account!',
                         style: TextStyle(
                           color: cWhite,
                         )),

@@ -1,6 +1,6 @@
-import 'package:audio/Helpers/Constants/navigate.dart';
-import 'package:audio/Model/featured_product_model.dart';
-import 'package:audio/Views/Screens/details_view.dart';
+import '../../Helpers/Constants/navigate.dart';
+import '../../Model/featured_product_model.dart';
+import '../Screens/details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../Helpers/Constants/assets.dart';

@@ -1,15 +1,15 @@
-import '../../Helpers/Constants/colors.dart';
-import '../../Helpers/Constants/navigate.dart';
-import '../../Helpers/Constants/size.dart';
-import 'home_view.dart';
+import '../../../Helpers/Constants/colors.dart';
+import '../../../Helpers/Constants/navigate.dart';
+import '../../../Helpers/Constants/size.dart';
+import '../../Widgets/background.dart';
+import '../../Widgets/custom_button.dart';
+import '../../Widgets/logo.dart';
+import '../../Widgets/signin_form.dart';
+import '../home_view.dart';
 import 'signup_view.dart';
-import '../Widgets/background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../Widgets/custom_button.dart';
-import '../Widgets/logo.dart';
-import '../Widgets/signin_form.dart';
 
 class SigninView extends StatefulWidget {
   const SigninView({Key? key}) : super(key: key);

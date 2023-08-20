@@ -1,8 +1,7 @@
-import 'package:audio/Helpers/Constants/colors.dart';
-import 'package:audio/Helpers/Constants/navigate.dart';
-import 'package:audio/Helpers/Constants/size.dart';
-import 'package:audio/Providers/cart.dart';
-import 'package:audio/Views/Screens/check_out.dart';
+import '../../Helpers/Constants/colors.dart';
+import '../../Helpers/Constants/navigate.dart';
+import '../../Helpers/Constants/size.dart';
+import '../../Providers/cart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,6 +12,7 @@ import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
 import '../Widgets/carted_product.dart';
 import '../Widgets/custom_button_without_form.dart';
+import 'Checkout/check_out.dart';
 
 class CartView extends StatefulWidget {
   const CartView({super.key});

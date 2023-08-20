@@ -1,14 +1,13 @@
-import 'package:audio/Helpers/Constants/colors.dart';
-import 'package:audio/Helpers/Constants/size.dart';
-import 'package:audio/Providers/cart.dart';
-import 'package:audio/Views/Widgets/checkout_container.dart';
-import 'package:audio/Views/Widgets/checkout_textfield.dart';
-import 'package:audio/Views/Widgets/custom_button_without_form.dart';
+import '../../../Helpers/Constants/colors.dart';
+import '../../../Helpers/Constants/size.dart';
+import '../../../Providers/cart.dart';
+import '../../Widgets/checkout_container.dart';
+import '../../Widgets/checkout_textfield.dart';
+import '../../Widgets/custom_button_without_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-
-import '../../Helpers/Constants/navigate.dart';
+import '../../../Helpers/Constants/navigate.dart';
 import 'checkout_done.dart';
 
 class CheckOutView extends StatefulWidget {

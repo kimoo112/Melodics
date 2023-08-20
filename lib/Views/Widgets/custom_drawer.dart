@@ -1,8 +1,8 @@
-import 'package:audio/Helpers/Constants/navigate.dart';
-import 'package:audio/Helpers/Constants/size.dart';
-import 'package:audio/Views/Screens/cart_view.dart';
-import 'package:audio/Views/Screens/profile_view.dart';
-import 'package:audio/Views/Screens/search_view.dart';
+import '../../Helpers/Constants/navigate.dart';
+import '../../Helpers/Constants/size.dart';
+import '../Screens/cart_view.dart';
+import '../Screens/profile_view.dart';
+import '../Screens/search_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 import '../../Helpers/Constants/colors.dart';
 import '../../Providers/cart.dart';
 import '../../Providers/google_signin_.dart';
-import '../Screens/signin_view.dart';
+import '../Screens/Login/signin_view.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});

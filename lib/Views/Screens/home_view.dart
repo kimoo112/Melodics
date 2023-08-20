@@ -1,4 +1,4 @@
-import 'package:audio/Views/Widgets/cart_with_badge.dart';
+import '../Widgets/cart_with_badge.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../../Helpers/Constants/colors.dart';

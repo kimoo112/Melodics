@@ -1,6 +1,6 @@
-import 'package:audio/Helpers/Constants/colors.dart';
-import 'package:audio/Helpers/Constants/size.dart';
-import 'package:audio/Views/Widgets/rating_stars.dart';
+import '../../Helpers/Constants/colors.dart';
+import '../../Helpers/Constants/size.dart';
+import '../Widgets/rating_stars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

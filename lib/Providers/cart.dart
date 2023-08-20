@@ -1,4 +1,4 @@
-import 'package:audio/Model/featured_product_model.dart';
+import '../Model/featured_product_model.dart';
 import 'package:flutter/material.dart';
 
 class TheCart extends ChangeNotifier {

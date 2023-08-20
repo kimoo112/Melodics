@@ -1,11 +1,12 @@
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
-import 'package:audio/Helpers/Constants/colors.dart';
-import 'package:audio/Views/Screens/home_view.dart';
-import 'package:audio/Views/Screens/signin_view.dart';
+import '../../Helpers/Constants/colors.dart';
+import 'home_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
+
+import 'Login/signin_view.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({Key? key}) : super(key: key);

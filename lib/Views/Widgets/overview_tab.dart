@@ -1,6 +1,6 @@
-import 'package:audio/Helpers/Constants/assets.dart';
-import 'package:audio/Views/Widgets/featured_product_row.dart';
-import 'package:audio/Views/Widgets/product_list_view.dart';
+import '../../Helpers/Constants/assets.dart';
+import 'featured_product_row.dart';
+import 'product_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

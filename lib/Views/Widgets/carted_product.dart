@@ -1,5 +1,5 @@
-import 'package:audio/Helpers/Constants/colors.dart';
-import 'package:audio/Providers/cart.dart';
+import '../../Helpers/Constants/colors.dart';
+import '../../Providers/cart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

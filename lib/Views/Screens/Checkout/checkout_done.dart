@@ -1,9 +1,10 @@
-import 'package:audio/Helpers/Constants/navigate.dart';
-import 'package:audio/Views/Screens/home_view.dart';
+import '../../../Helpers/Constants/navigate.dart';
+import '../home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../Helpers/Constants/colors.dart';
+import '../../../Helpers/Constants/colors.dart';
+
 
 class CheckOutDone extends StatelessWidget {
   const CheckOutDone({super.key, required this.name});

@@ -1,5 +1,5 @@
-import 'package:audio/Model/reviews_model.dart';
-import 'package:audio/Views/Widgets/review_widget.dart';
+import '../../Model/reviews_model.dart';
+import 'review_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

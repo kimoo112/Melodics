@@ -1,10 +1,10 @@
-import 'package:audio/Helpers/Constants/colors.dart';
-import 'package:audio/Helpers/Constants/navigate.dart';
-import 'package:audio/Helpers/Constants/size.dart';
-import 'package:audio/Model/featured_product_model.dart';
-import 'package:audio/Views/Screens/details_view.dart';
-import 'package:audio/Views/Widgets/add_to_cart_icon.dart';
-import 'package:audio/Views/Widgets/cart_with_badge.dart';
+import '../../Helpers/Constants/colors.dart';
+import '../../Helpers/Constants/navigate.dart';
+import '../../Helpers/Constants/size.dart';
+import '../../Model/featured_product_model.dart';
+import 'details_view.dart';
+import '../Widgets/add_to_cart_icon.dart';
+import '../Widgets/cart_with_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';

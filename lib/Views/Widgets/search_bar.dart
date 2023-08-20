@@ -1,4 +1,4 @@
-import 'package:audio/Helpers/Constants/navigate.dart';
+import '../../Helpers/Constants/navigate.dart';
 
 import '../../Helpers/Constants/colors.dart';
 import 'package:flutter/cupertino.dart';
