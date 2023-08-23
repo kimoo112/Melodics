@@ -69,75 +69,7 @@ class _SearchViewState extends State<SearchView> {
                       shrinkWrap: true,
                       itemCount: searchedList.length,
                       itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0),
-                          child: ListTile(
-                            title: GestureDetector(
-                                 onTap: () {
-                          navigateToP(
-                              DetailsScreen(
-                                  image: searchedList[index].image,
-                                  name: searchedList[index].name,
-                                  price: searchedList[index].price,
-                                  rate: searchedList[index].rate),
-                              context);
-                        },
-                              child: Text(
-                                searchedList[index].name,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18.sp,
-                                ),
-                              ),
-                            ),
-                            subtitle: GestureDetector(
-                                 onTap: () {
-                          navigateToP(
-                              DetailsScreen(
-                                  image: searchedList[index].image,
-                                  name: searchedList[index].name,
-                                  price: searchedList[index].price,
-                                  rate: searchedList[index].rate),
-                              context);
-                        },
-                              child: Text(
-                                'USD ${searchedList[index].price}',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 14.sp,
-                                    color: cMain),
-                              ),
-                            ),
-                            leading: GestureDetector(
-                                 onTap: () {
-                          navigateToP(
-                              DetailsScreen(
-                                  image: searchedList[index].image,
-                                  name: searchedList[index].name,
-                                  price: searchedList[index].price,
-                                  rate: searchedList[index].rate),
-                              context);
-                        },
-                              child: Image.asset(searchedList[index].image)),
-                            trailing: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "${searchedList[index].rate}",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14.sp,
-                                      color: cOrange),
-                                ),
-                                AddToCartIcon(
-                                  index: index,
-                                  list: searchedList,
-                                  size: 18.sp,
-                                )
-                              ],
-                            ),
-                          ),
-                        );
+                        return SearchContainer(searchedList: searchedList, index: index,);
                       })
             ],
           ),
@@ -175,6 +107,86 @@ class _SearchViewState extends State<SearchView> {
           ],
         )),
       ],
+    );
+  }
+}
+
+class SearchContainer extends StatelessWidget {
+  const SearchContainer({
+    super.key,
+    required this.searchedList,
+    required this.index,
+  });
+
+  final List<FeaturedModel> searchedList;
+  final int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: ListTile(
+        title: GestureDetector(
+          onTap: () {
+            navigateToP(
+                DetailsScreen(
+                    image: searchedList[index].image,
+                    name: searchedList[index].name,
+                    price: searchedList[index].price,
+                    rate: searchedList[index].rate),
+                context);
+          },
+          child: Text(
+            searchedList[index].name,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18.sp,
+            ),
+          ),
+        ),
+        subtitle: GestureDetector(
+          onTap: () {
+            navigateToP(
+                DetailsScreen(
+                    image: searchedList[index].image,
+                    name: searchedList[index].name,
+                    price: searchedList[index].price,
+                    rate: searchedList[index].rate),
+                context);
+          },
+          child: Text(
+            'USD ${searchedList[index].price}',
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 14.sp, color: cMain),
+          ),
+        ),
+        leading: GestureDetector(
+            onTap: () {
+              navigateToP(
+                  DetailsScreen(
+                      image: searchedList[index].image,
+                      name: searchedList[index].name,
+                      price: searchedList[index].price,
+                      rate: searchedList[index].rate),
+                  context);
+            },
+            child: Image.asset(searchedList[index].image)),
+        trailing: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "${searchedList[index].rate}",
+              style: TextStyle(
+                  fontWeight: FontWeight.w500, fontSize: 14.sp, color: cOrange),
+            ),
+            AddToCartIcon(
+              index: index,
+              list: searchedList,
+              size: 18.sp,
+            )
+          ],
+        ),
+      ),
     );
   }
 }

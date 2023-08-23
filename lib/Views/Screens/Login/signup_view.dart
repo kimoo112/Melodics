@@ -17,7 +17,6 @@ import 'signin_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class SignupView extends StatefulWidget {
   const SignupView({Key? key}) : super(key: key);
 
@@ -135,9 +134,10 @@ class ThePlatformContainers extends StatelessWidget {
             return PlatformContainer(
               image: Assets.iconsApple,
               onTap: () {
-                signinWithGoogle.signInWithGoogle().then((googleSignInAccount) {
-                  if (googleSignInAccount.credential == null
-                      ) {
+                signinWithGoogle
+                    .signInWithGoogle(context)
+                    .then((googleSignInAccount) {
+                  if (googleSignInAccount.credential == null) {
                     showTopSnackBar(
                       snackBarPosition: SnackBarPosition.bottom,
                       displayDuration: const Duration(milliseconds: 500),
@@ -167,8 +167,7 @@ class ThePlatformContainers extends StatelessWidget {
             return PlatformContainer(
               image: Assets.iconsGoogle,
               onTap: () {
-                signinWithGoogle.signInWithGoogle().whenComplete(
-                    () => navigateToPR(const HomeView(), context));
+                signinWithGoogle.signInWithGoogle(context);
               },
             );
           },
